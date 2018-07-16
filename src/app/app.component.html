@@ -1,4 +1,35 @@
-<h1>{{ title }}</h1>
+<div>
+	<app-cv></app-cv>
+
+
+	<h1>{{ title }}</h1>
+	<input type="text" [(ngModel)]="name" placeholder="Name">
+	<input type="number" [(ngModel)]="nbr" placeholder="Number">
+	<input type="number" [(ngModel)]="amount" placeholder="Amount">
+	<button (click)="add()">Add</button>
+
+	<p></p>
+
+	<table class="table">
+		<thead>
+			<th>Name</th>
+			<th>Nbr</th>
+			<th>Amount</th>
+		</thead>
+		<tr *ngFor="let name of names">
+			<td>{{ name.name }}</td>
+			<td>{{ name.nbr }}</td>
+			<td>{{ name.amount }}</td>
+		</tr>
+	</table>
+
+
+</div>
+
+
+
+
+<!-- <h1>{{ title }}</h1>
 <p>
   <button (click)="onclick()">Click me!</button>
   <label>{{ sometext }}</label>
@@ -15,7 +46,12 @@
         <span *ngSwitchCase=4>{{ mnv }}</span>
       </span>
       <span> {{ name.abool ? "yes" : "no" }}</span>
+      <span *ngIf="name.abool">True</span>
+      <span *ngIf="!name.abool">False</span>
     </li>
   </ul>
 
-</div>
+
+  <input type="text" [(ngModel)]="aMessage"><label>{{ aMessage }}</label>
+
+</div> -->

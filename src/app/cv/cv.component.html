@@ -1,0 +1,12 @@
+<div>
+	<h1>Resume of {{ name }}</h1>
+	<h2>Address: {{ address }}</h2>
+	<h3>Technical Development: {{ tech }}</h3>
+	<section>
+		<h4>Skills</h4>
+		<ul>
+			<li *ngFor="let skill of skills">{{ skill }}
+		</ul>
+	</section>
+</div>
+<app-cv-extended></app-cv-extended>
