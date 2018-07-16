@@ -1,5 +1,21 @@
-<h1> {{title}} </h1>
+<h1>{{ title }}</h1>
 <p>
   <button (click)="onclick()">Click me!</button>
   <label>{{ sometext }}</label>
 </p>
+<button (click)="toggle()">Toggle</button>
+<div *ngIf="displayName">
+  <ul>
+    <li *ngFor="let name of names">
+      The name is {{ name.name }}
+      <span [ngSwitch]="name.tag">
+        <span *ngSwitchCase=1>{{ fv }}</span>
+        <span *ngSwitchCase=2>{{ fnv }}</span>
+        <span *ngSwitchCase=3>{{ mv }}</span>
+        <span *ngSwitchCase=4>{{ mnv }}</span>
+      </span>
+      <span> {{ name.abool ? "yes" : "no" }}</span>
+    </li>
+  </ul>
+
+</div>
