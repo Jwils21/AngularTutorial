@@ -9,6 +9,7 @@ import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { UserListComponent } from './user/user-list/user-list.component';
 import { CvComponent } from './cv/cv.component';
 import { CvExtendedComponent } from './cv-extended/cv-extended.component';
+import { CvAdsComponent } from './cv-ads/cv-ads.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { CvExtendedComponent } from './cv-extended/cv-extended.component';
     UserListComponent,
     CvComponent,
     CvExtendedComponent,
+    CvAdsComponent,
   ],
   imports: [
     BrowserModule, FormsModule
